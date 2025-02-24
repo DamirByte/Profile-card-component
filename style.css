@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    --cyan: hsl(185, 75%, 39%);
+    --dark-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+    --gray: hsl(0, 0%, 59%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kumbh Sans", serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-pattern-top.svg),url(images/bg-pattern-bottom.svg);
+    background-position: -150px -150px, calc(100% + 150px) calc(100% + 150px);
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-color: var(--cyan);
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    background: url(images/bg-pattern-card.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--white);
+    width: 90%;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    /* height: 400px; */
+    padding: 40px 0;
+    padding-bottom: 30px;
+    flex-direction: column;
+    text-align: center;
+    max-width: 370px;
+}
+
+.card .card-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card .card-profile img {
+    width: 110px;
+    margin: 0 auto 10px auto;
+    border: 5px solid var(--white);
+    border-radius: 50%;
+    margin-top: 40px;
+}
+
+.card .card-profile h2{
+    font-size: 18px;
+    display: flex;
+    gap: 8px;
+}
+
+.card .card-profile h2 span,
+.card .card-profile p{
+    color: var(--grayish-blue);
+    font-weight: 400;
+}
+
+hr {
+    width: 100%;
+    margin: 30px auto;
+    border: 1px solid rgb(235, 234, 234);
+    margin-bottom: 30px;
+}
+
+.stats {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stats .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stats .stat p {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-size: 40%;
+    }
+}
