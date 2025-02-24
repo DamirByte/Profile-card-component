@@ -101,4 +101,8 @@ hr {
     body {
         background-size: 40%;
     }
+
+    .card .card-profile img {
+        margin-top: 55px;
+    }
 }
